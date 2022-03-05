@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int share;
+    double saleprice, purchaseprice; 
+    double amountinvested, servicecharges;
+    double investmet;
+    double total;
+    float servicecharge;
+    float profit;
+
+    cout << "How many shares did you sell?: ";
+    cin >> share;
+    cout << "Enter the price of the share($): ";
+    cin >> saleprice;
+    cout << "Eenter the purchase price of the share ($): ";
+    cin  >> purchaseprice;
+    investmet = share * purchaseprice;
+    total = share * saleprice;
+    cout << "Amount Invested: " << investmet<<"$" << endl;
+    servicecharge = (1.5/100)*total;
+    cout << "Service Charges: "<<servicecharge<<"$ " <<endl;
+    
+    profit = (total-investmet)-servicecharge;
+    cout << "Profit / Loss : " << profit <<"$";
+
+
+    return 0;
+}
